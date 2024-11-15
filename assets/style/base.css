@@ -1,5 +1,11 @@
-/* we give these parameters to *.css */
+/* Style for *.html */
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Shabnam','IranNastaliq';
+}
 
+/* we give these parameters to *.css */
 :root{
   /* color */
   --primary:#2f3bbc;
