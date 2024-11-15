@@ -1,0 +1,240 @@
+/* Style for Index.html */
+@import url('parameters.css');
+@import url('fonts.css');
+
+/* Header Option */
+header{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(166, 174, 191,0.9);
+  padding: var(--S_padding) var(--L_padding);
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid var(--primary);
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+}header:hover{
+  background-color: var(--secondary);
+
+}
+
+/* Left side of the Header */
+header .header-left button{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  font-family: 'Shabnam';
+  padding: var(--S_padding);
+  text-align: center;
+  border-radius: var(--T);
+  font-size: var(--M);
+  transition: all 0.2s ease-in-out;
+  outline: none;
+}header .header-left button:hover{
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--primary);
+  border: 3px solid var(--primary);
+  box-shadow: inset 0px 0px 10px var(--shadow);
+}
+
+header .header-left span{
+  margin-left: 5px;  
+  font-size: var(--L);
+}
+
+/* end Left side of the Header */
+
+/* Middle side of the Header */
+header .header-middle{
+  display: flex;
+  justify-content: space-between;
+  width: var(--Half);
+}
+
+header .header-middle a{
+  text-decoration: none;
+  color: var(--gray);
+  font-size: var(--M);
+  transition: all 0.2s ease-in-out;
+}header .header-middle a:hover{
+  color: var(--primary);
+  font-size: var(--L);
+  font-weight: bold;
+}
+/* end Middle side of the Header */
+
+/* Right side of the Header */  
+header .header-right{
+  width: 100px;
+}
+header .header-right img{
+  width: 45px;
+}
+/* end of Right side of the Header */  
+/* end of Header Option */
+
+
+
+/* Container Option */
+/* firstSight Option */
+.container .container-firstSight{
+  width: 100%;
+  height: var(--FullHeight);
+}
+.container-firstSight .firstSight-background{
+  width: 100%;
+  height: 100%;
+  background-image: url("/static/images/uni_background.webp");
+  background-repeat:round;
+  background-size: cover;
+  filter: blur(4px);
+  z-index: -1;
+}
+.firstSight-background .background-filter{
+  position: absolute;
+  background-color: black;
+  opacity: var(--Half);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.container-firstSight .firstSight-bio{
+  position: absolute;
+  top: 25px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  filter: none;
+  width: var(--SeventyFive);
+  height: var(--SeventyFive);
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+}
+
+.container-firstSight .firstSight-bio img{
+  width: 100px;
+}
+
+.firstSight-bio .bio-text{
+  text-align: center;
+}
+
+.firstSight-bio .bio-text h1{
+  text-align: center;
+  padding-right: var(--L_padding);
+  color: white;
+  text-shadow: 1px 1px 3px var(--primary);
+  font-family: 'IranNastaliq';
+  font-size: var(--Header);
+}
+
+.firstSight-bio .bio-text p{
+  color: white;
+  font-size: var(--L);
+  font-weight: bold;
+  font-family: 'Shabnam';
+}
+
+.firstSight-bio .bio-link{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: var(--SeventyFive);
+  margin: var(--M_padding) auto 0 auto;
+}
+
+.bio-link .link-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+  width: 100px;
+  height: 150px;
+  background-color: var(--secondary);
+  border-radius: 15px 0px;
+  padding: var(--S_padding);
+  color: var(--gray);
+  text-decoration: none;
+}.bio-link .link-card:hover{
+  cursor: pointer;
+  box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.6);
+  font-weight: bold;
+  color: rgb(242, 242, 242);
+}
+
+.bio-link .link-card i{
+  font-size: 80px;
+}
+.bio-link .link-card h5{
+  font-family: 'Shabnam';
+}
+
+/* end of firstSight Option */
+/* end of Container Option */
+
+
+/* Footer Option */
+footer{
+  display: flex;
+  background-color: var(--secondary);
+  direction: rtl;
+  justify-content: space-evenly;
+  padding: var(--M_padding) var(--L_padding);
+}
+
+footer .footer-bio{
+  width: var(--Quarter);
+}
+
+.footer-bio .bio-info{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: var(--primary);
+  margin-bottom: var(--M_padding);
+}
+
+.bio-info .info-logo{
+  width: 30px;
+}
+
+.footer-bio .bio-info i{
+  font-size: 30px;
+  width: 50px;
+}
+.bio-info .info-text{
+  margin-right: var(--M_padding);
+}
+.bio-info .info-text p{
+  color: white;
+}
+.bio-info .info-text h5{
+  font-weight: normal;
+}
+
+footer .footer-logo{
+  text-align: center;
+  position: relative;
+}
+footer .footer-logo img{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 150px;
+}
+/* end of Footer Option */
