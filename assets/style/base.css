@@ -5,12 +5,18 @@
   font-family: 'Shabnam','IranNastaliq';
 }
 
+.container{
+  box-shadow: inset 0px 15px 20px -10px var(--shadow), inset 0px -15px 20px -10px var(--shadow); 
+  background-color: var(--white);
+}
+
 /* we give these parameters to *.css */
 :root{
   /* color */
   --primary:#2f3bbc;
   --secondary:#A6AEBF;
   --gray:#3C3D37;
+  --white :#F4F9F9;
   --shadow:#0000004d;
 
   /* size */
