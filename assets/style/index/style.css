@@ -47,8 +47,7 @@ header{
   margin-left: 5px;  
   font-size: var(--L);
 }
-
-/* end Left side of the Header */
+/* end of Left side of the Header */
 
 /* Middle side of the Header */
 .header_middle{
@@ -67,7 +66,7 @@ header{
   font-size: var(--L);
   font-weight: bold;
 }
-/* end Middle side of the Header */
+/* end of Middle side of the Header */
 
 /* Right side of the Header */  
 .header_right{
@@ -81,8 +80,8 @@ header{
 
 
 
-/* Container Option */
-/* firstSight Option */
+/* Main Option */
+/* First Section Option */
 .parent{
   width: 100%;
   height: var(--FullHeight);
@@ -181,8 +180,8 @@ header{
   font-family: 'Shabnam';
 }
 
-/* end of firstSight Option */
-/* end of Container Option */
+/* end of First Section Option */
+/* end of Main Option */
 
 
 /* Footer Option */
@@ -194,6 +193,7 @@ footer{
   padding: var(--M_padding) var(--L_padding);
 }
 
+/* footer Text Side option */
 .footer_bio{
   width: var(--Quarter);
 }
@@ -219,7 +219,9 @@ footer{
 .footer_text h5{
   font-weight: normal;
 }
+/* end of footer Text Side option */
 
+/* Footer Logo Side option */
 footer .logo{
   text-align: center;
   position: relative;
@@ -233,4 +235,5 @@ footer .logo img{
   margin: auto;
   width: 100px;
 }
+/* end of Footer Logo Side option */
 /* end of Footer Option */
