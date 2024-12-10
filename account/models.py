@@ -206,8 +206,8 @@ class ContactInfo(models.Model):
     # content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
     # object_id = models.PositiveIntegerField()
     # person = GenericForeignKey('content_type', 'object_id')
-    # created_at = models.DateTimeField(auto_now_add=True, verbose_name="تاریخ ایجاد")
-    # updated_at = models.DateTimeField(auto_now=True, verbose_name="تاریخ بروزرسانی")
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name="تاریخ ایجاد")
+    updated_at = models.DateTimeField(auto_now=True, verbose_name="تاریخ بروزرسانی")
 
 class PhoneNumber(ContactInfo):
     """
@@ -358,8 +358,9 @@ class Course(models.Model):
             )
         ])
     prerequisites = models.ManyToManyField('self', blank=True, verbose_name="پیش ‌نیاز ها")
-    Department = models.ForeignKey("Department", on_delete=models.PROTECT, verbose_name="دپارتمان")
-
+    department = models.ForeignKey("Department", on_delete=models.PROTECT, verbose_name="دپارتمان")
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name="تاریخ ایجاد")
+    updated_at = models.DateTimeField(auto_now=True, verbose_name="تاریخ بروزرسانی")
 
     def __str__(self):
         return f"{self.name} - {self.code}"
@@ -380,6 +381,8 @@ class Faculty(models.Model):
         verbose_name="کد دانشکده")
     establishment_Date = jmodels.jDateField(verbose_name="تاریخ تاسیس")
     website = models.URLField(blank=True, verbose_name="وبسایت")
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name="تاریخ ایجاد")
+    updated_at = models.DateTimeField(auto_now=True, verbose_name="تاریخ بروزرسانی")
 
     def __str__(self):
         return self.name
@@ -400,6 +403,8 @@ class Department(models.Model):
         verbose_name="کد دپارتمان")
     faculty = models.ForeignKey('Department', on_delete=models.CASCADE, verbose_name="نام دانشکده مربوطه")
     established_Date = jmodels.jDateField(verbose_name="تاریخ تاسیس")
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name="تاریخ ایجاد")
+    updated_at = models.DateTimeField(auto_now=True, verbose_name="تاریخ بروزرسانی")
 
     def __str__(self):
         return f"{self.name} - {self.faculty}"
